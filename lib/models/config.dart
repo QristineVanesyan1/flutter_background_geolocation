@@ -1389,6 +1389,9 @@ class Config {
   ///
   /// ##### `@config {String} titleWhenOff [Location services are off]`  The title of the alert if user changes, for example, the location-request to `WhenInUse` when you requested `Always`.
   ///
+  /// ##### `@config {String} titleWhenNotEnabled [Background location is not enabled]`  The title of the alert when user disables location-services or changes the authorization request to `Never`
+  ///
+  /// ##### `@config {String} instructions [To use background location, you must enable {locationAuthorizationRequest} in the Location Services settings]`  The body text of the alert.
   ///
   /// ##### `@config {String} cancelButton [Cancel]` Cancel button label
   ///
@@ -1399,9 +1402,18 @@ class Config {
   /// ## Example
   ///
   /// ```dart
+  /// BackgroundGeolocation.ready(Config(
+  ///   locationAuthorizationAlert: {
+  ///     'titleWhenNotEnabled': 'Yo, location-services not enabled',
+  ///     'titleWhenOff': 'Yo, location-services OFF',
+  ///     'instructions': 'You must enable 'Always' in location-services, buddy',
+  ///     'cancelButton': 'Cancel',
+  ///     'settingsButton': 'Settings'
+  ///   }
+  /// ))
   /// ```
   ///
-  Map<String, dynamic>? locationAuthorizationAlert;
+  // Map<String, dynamic>? locationAuthorizationAlert;
 
   /// Disables automatic authorization alert when plugin detects the user has disabled location authorization.
   ///
