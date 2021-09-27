@@ -114,10 +114,6 @@ class State extends Config {
             pausesLocationUpdatesAutomatically:
                 _ensureBool(data['pausesLocationUpdatesAutomatically']),
             locationAuthorizationRequest: data['locationAuthorizationRequest'],
-            locationAuthorizationAlert:
-                (data['locationAuthorizationAlert'] != null)
-                    ? data['locationAuthorizationAlert'].cast<String, dynamic>()
-                    : null,
             // Activity Recognition Options
             activityType: data['activityType'],
             stopDetectionDelay: _ensureInt(data['stopDetectionDelay']),

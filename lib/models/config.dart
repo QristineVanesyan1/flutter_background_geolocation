@@ -2054,7 +2054,6 @@ class Config {
 
       // Geolocation Options
       this.pausesLocationUpdatesAutomatically,
-      this.locationAuthorizationAlert,
       this.disableLocationAuthorizationAlert,
       this.showsBackgroundLocationIndicator,
       // Activity Recognition Options
@@ -2198,8 +2197,6 @@ class Config {
           pausesLocationUpdatesAutomatically;
     if (locationAuthorizationRequest != null)
       config['locationAuthorizationRequest'] = locationAuthorizationRequest;
-    if (locationAuthorizationAlert != null)
-      config['locationAuthorizationAlert'] = locationAuthorizationAlert;
     if (disableLocationAuthorizationAlert != null)
       config['disableLocationAuthorizationAlert'] =
           disableLocationAuthorizationAlert;
