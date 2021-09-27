@@ -1381,40 +1381,6 @@ class Config {
   ///
   String? locationAuthorizationRequest;
 
-  /// __`[iOS only]`__ Controls the text-elements of the plugin's location-authorization dialog.
-  ///
-  /// When you configure the plugin [locationAuthorizationRequest] `Always` or `WhenInUse` and the user *changes* the mode in the app's location-services settings or disabled location-services, the plugin will display an Alert dialog directing the user to the **Settings** screen.  **`locationAuthorizationAlert`** allows you to configure all the Strings for that Alert popup and accepts an `Map` containing the following keys:
-  ///
-  /// __WARNING:__ If you choose to configure `locationAuthorizationAlert`, you must provide **ALL** the following options -- not just *some*.
-  ///
-  /// ##### `@config {String} titleWhenOff [Location services are off]`  The title of the alert if user changes, for example, the location-request to `WhenInUse` when you requested `Always`.
-  ///
-  /// ##### `@config {String} titleWhenNotEnabled [Background location is not enabled]`  The title of the alert when user disables location-services or changes the authorization request to `Never`
-  ///
-  /// ##### `@config {String} instructions [To use background location, you must enable {locationAuthorizationRequest} in the Location Services settings]`  The body text of the alert.
-  ///
-  /// ##### `@config {String} cancelButton [Cancel]` Cancel button label
-  ///
-  /// ##### `@config {String} settingsButton [Settings]` Settings button label
-  ///
-  /// ![](https://dl.dropbox.com/s/wk66ave2mzq6m6a/ios-locationAuthorizationAlert.jpg?dl=1)
-  ///
-  /// ## Example
-  ///
-  /// ```dart
-  /// BackgroundGeolocation.ready(Config(
-  ///   locationAuthorizationAlert: {
-  ///     'titleWhenNotEnabled': 'Yo, location-services not enabled',
-  ///     'titleWhenOff': 'Yo, location-services OFF',
-  ///     'instructions': 'You must enable 'Always' in location-services, buddy',
-  ///     'cancelButton': 'Cancel',
-  ///     'settingsButton': 'Settings'
-  ///   }
-  /// ))
-  /// ```
-  ///
-  // Map<String, dynamic>? locationAuthorizationAlert;
-
   /// Disables automatic authorization alert when plugin detects the user has disabled location authorization.
   ///
   /// You will be responsible for handling disabled location authorization by listening to the [BackgroundGeolocation.onProviderChange] event.
